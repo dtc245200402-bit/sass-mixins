@@ -1,0 +1,33 @@
+@use "sass:color";
+@use "variables" as vars;
+
+// Dùng lại cho mọi nút có màu nền truyền vào.
+@mixin button-style($bg-color) {
+  background: $bg-color;
+  color: vars.$surface-color;
+  padding: vars.$padding-standard;
+  border: 0;
+  border-radius: vars.$button-radius;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 180ms ease, transform 180ms ease;
+
+  &:hover {
+    background: color.adjust($bg-color, $lightness: -8%);
+    transform: translateY(-2px);
+  }
+
+  &:focus-visible {
+    outline: 3px solid color.change($bg-color, $alpha: 0.3);
+    outline-offset: 3px;
+  }
+}
+
+// Dùng lại cho các khối dạng thẻ.
+@mixin box-style {
+  background: vars.$surface-color;
+  padding: 15px;
+  border-radius: vars.$card-radius;
+  box-shadow: vars.$box-shadow-default;
+}

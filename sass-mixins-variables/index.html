@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ví dụ thực hành Sass variables và mixins để tối ưu CSS.">
+  <title>Sass Variables & Mixins | Demo</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top">SASS<span>LAB</span></a>
+      <nav class="nav-links" aria-label="Điều hướng chính">
+        <a href="#top">Trang chủ</a>
+        <a href="#features">Tính năng</a>
+        <a href="#about">Giới thiệu</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container">
+        <span class="eyebrow">Viết ít hơn, tái sử dụng nhiều hơn</span>
+        <h1>Tối ưu CSS bằng <span style="color:#e53935">SASS Variables</span> &amp; Mixins</h1>
+        <p class="subtitle">Tập trung màu sắc, kích thước và kiểu hiển thị vào một nơi. Khi thiết kế thay đổi, bạn chỉ cần sửa biến thay vì săn từng dòng CSS như tìm kim trong đống code.</p>
+        <a class="button" href="#features">Khám phá các thành phần</a>
+      </div>
+    </section>
+
+    <section class="container" id="features">
+      <div class="section-heading">
+        <span class="section-label">Ví dụ thực hành</span>
+        <h2>Chỉ vài quy tắc, dùng lại ở nhiều nơi</h2>
+        <p class="subtitle">Các thẻ dùng chung mixin về nền, padding, bo góc và đổ bóng.</p>
+      </div>
+      <div class="card-grid">
+        <article class="card">
+          <div class="card-icon">Aa</div>
+          <h3>Biến tập trung</h3>
+          <p>Màu chính, màu chữ, kích thước phông và box-shadow được khai báo trong một file variables.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">{ }</div>
+          <h3>Mixin tái sử dụng</h3>
+          <p>button-style nhận màu nền làm tham số; box-style gom các thuộc tính thẻ dùng chung.</p>
+        </article>
+        <article class="card" id="about">
+          <div class="card-icon">↗</div>
+          <h3>Dễ bảo trì</h3>
+          <p>SCSS được chia thành partials theo trách nhiệm, sau đó kết hợp qua main.scss để biên dịch.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> SassLab. Bài thực hành SASS.</p>
+      <p>HTML · SCSS · CSS</p>
+    </div>
+  </footer>
+</body>
+</html>
